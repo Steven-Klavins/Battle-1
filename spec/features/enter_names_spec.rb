@@ -16,10 +16,18 @@ feature "View Hitpoints" do
   end
 end
 
-feature 'Player 1 attacks player 2' do
+feature 'Player 1 can click attack buttonm' do
   scenario 'after attacking, player sees confirmation of attack' do
     sign_in_and_play
     click_button('Attack!')
     expect(page).to have_content 'Player 1 attacked!'
+  end
+end
+
+feature 'Player 1 attacks player 2 and hp goes down' do
+  scenario 'after attacking p2 hp is 90' do
+    sign_in_and_play
+    click_button('Attack!')
+    expect(page).to have_content 'Player 2 HP: 90'
   end
 end
