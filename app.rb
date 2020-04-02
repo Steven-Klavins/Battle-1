@@ -3,13 +3,13 @@ require './lib/player'
 
 class Battle < Sinatra::Base
   enable :sessions 
-  set :session_secret, "Set session"
 
   get '/' do
     erb :index
   end
 
   post '/names' do
+    pp session
     $player_1 = Player.new(params[:player_1_name])
     $player_2 = Player.new(params[:player_2_name])
 
