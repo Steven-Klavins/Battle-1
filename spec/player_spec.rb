@@ -10,7 +10,7 @@ describe Player do
     expect(pete.name).to eq 'Pete'
   end
 
-  it '#attack causes target hp to lower by 10' do
+  it '#take_damge causes player hp to lower by 10' do
     expect {pete.take_damage}.to change { pete.hp }.by(-10)
   end
 end
