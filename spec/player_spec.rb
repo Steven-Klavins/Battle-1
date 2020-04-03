@@ -11,6 +11,6 @@ describe Player do
   end
 
   it '#attack causes target hp to lower by 10' do
-    expect { dave.attack(pete) }.to change { pete.hp }.by(-10)
+    expect {pete.take_damage}.to change { pete.hp }.by(-10)
   end
 end
