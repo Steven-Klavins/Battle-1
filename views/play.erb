@@ -1,7 +1,7 @@
 
 <h1> Let The Games Commence </h1>
-<h2> <%= @player_1_name %> vs <%= @player_2_name %> </h2>
-<h3>Player 2 HP: <%= @player_2_hp %></h3>
+<h2> <%= @game.player_one.name %> vs <%= @game.player_two.name %> </h2>
+<h3>Player 2 HP: <%= @game.player_two.hp %></h3>
 
 <form action="/attack" method="post">
   <button name="attack" value="Player 1 attacked!">Attack!</button>
